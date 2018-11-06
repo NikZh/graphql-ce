@@ -1,0 +1,15 @@
+# Copyright © Magento, Inc. All rights reserved.
+# See COPYING.txt for license details.
+
+type Query {
+    compareProducts: CompareProducts @resolver(class: "Magento\\ProductCompareGraphQl\\Model\\Resolver\\CompareProducts") @doc(description: "todo")
+}
+
+type CompareProducts {
+    items: [CompareItem] @resolver(class: "Magento\\ProductCompareGraphQl\\Model\\Resolver\\CompareProducts") @doc(description: "todo")
+}
+
+type CompareItem {
+    item_id: Int
+    product: ProductInterface
+}
